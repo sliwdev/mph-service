@@ -1,0 +1,13 @@
+micronaut:
+  application:
+    name: mphService
+
+commission:
+  multiplier:
+    bid: 0.999
+    ask: 1.001
+
+netty:
+  default:
+    allocator:
+      max-order: 3
