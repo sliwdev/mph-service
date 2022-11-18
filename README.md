@@ -9,7 +9,7 @@ To run the app execute:
 ## Running tests
 Just
 ```
-.gradlew clean test
+./gradlew clean test
 ```
 would be enough.
 
