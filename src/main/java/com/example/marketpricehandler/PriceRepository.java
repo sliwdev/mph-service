@@ -19,7 +19,7 @@ class PriceRepository {
         });
     }
 
-    private static void validateTimestamp(Price currentPrice, Price newPrice) {
+    private void validateTimestamp(Price currentPrice, Price newPrice) {
         if (newPrice.isBefore(currentPrice)) {
             throw new InvalidPriceTimestampException("New price cannot be older than current, current price: " + currentPrice + ", new price: " + newPrice);
         }
