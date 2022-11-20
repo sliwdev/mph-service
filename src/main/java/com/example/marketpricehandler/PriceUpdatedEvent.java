@@ -32,7 +32,7 @@ record PriceUpdatedEvent(Long id, InstrumentName instrumentName, Double bid, Dou
         try {
             String[] parts = message.split(",", 5);
             id = parseLong(parts[0]);
-            instrumentName = InstrumentName.forValue(parts[1].replace("/", "_"));
+            instrumentName = InstrumentName.valueOf(parts[1].replace("/", "_"));
             bid = Double.parseDouble(parts[2]);
             ask = Double.parseDouble(parts[3]);
             timestamp = LocalDateTime.parse(parts[4], DATE_TIME_FORMATTER)
